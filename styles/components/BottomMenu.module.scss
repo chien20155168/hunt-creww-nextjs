@@ -1,0 +1,132 @@
+@import "../variables";
+
+.bottom-menu {
+    position: fixed;
+    top: calc(100% - #{$size-bottom-height});
+    height: $size-bottom-height;
+    width: 100%;
+    background-color: $color-bg;
+    border-top: solid 1px $color-devider-1;
+    z-index: 2;
+    max-width: inherit;
+    .contents {
+        text-align: center;
+
+        .menu-list {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10px;
+
+            .menu {
+                display: inline-block;
+                font-size: 10px;
+                min-width: 45px;
+                line-height: $size-bottom-height;
+                cursor: pointer;
+
+                svg {
+                    position: relative;
+                    top: 2px;
+                }
+
+                .label {
+                    line-height: initial;
+                    position: relative;
+                    top: -24px;
+                    color: $color-text-light;
+                }
+
+                .white {
+                    color: #FFF;
+                }
+
+                .base-circle {
+                    background-color: $color-primary;
+                    width: 76px;
+                    height: 76px;
+                    border-radius: 50%;
+                    position: relative;
+                    top: -84px;
+                    z-index: 10001;
+                }
+
+                .marker {
+                    $size: 7px;
+                    background-color: $color-accent;
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    position: relative;
+                    top: -70px;
+                    left: 29px;
+                }
+
+
+                .model {
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+                    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+                    justify-content: center;
+                    justify-items: center;
+                    flex-direction: column;
+                    padding: 5px;
+                    overflow: auto;
+
+                    .content {
+                        padding: 20px;
+
+                        .icon {
+                            display: flex;
+                            justify-content: center;
+                            justify-items: center;
+                        }
+
+                        .title {
+                            font-family: $font-text-second-hiragino;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 20px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #5CBDCA;
+                            flex: none;
+                            align-self: center;
+                            flex-grow: 0;
+                            margin-top: 10px;
+                        }
+
+                        .text-main {
+                            font-family: $font-text-second-hiragino;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #737373;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .close {
+                        display: flex;
+                        justify-content: flex-end;
+                        line-height: 0
+                    }
+
+                    .down {
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                        line-height: 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            .highlight {
+                z-index: 10002;
+            }
+        }
+    }
+}

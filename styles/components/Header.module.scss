@@ -1,0 +1,55 @@
+@import "../variables";
+
+
+$size-header-height: 50px;
+
+.header-root {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    background-color: $color-primary;
+    height: $size-header-height;
+    max-width: inherit;
+    .contents {
+        margin-left: 18px;
+        height: $size-header-height;
+
+        .title-label {
+            height: $size-header-height;
+            display: inline-block;
+            cursor: pointer;
+
+            .svg-title {
+                width: 143px;
+                height: $size-header-height;
+            }
+
+            .svg-company {
+                margin-left: 8px;
+                width: 44px;
+                height: calc(#{$size-header-height} - 9px);
+            }
+        }
+
+        .menu {
+            width: 36px;
+            float: right;
+            height: $size-header-height;
+            margin-right: 12px;
+            text-align: center;
+            cursor: pointer;
+
+            .svg-menu {
+                width: 25px;
+                height: 25px;
+                margin-top: 7px;
+            }
+
+            .svg-label-menu {
+                margin-bottom: 7px;
+                width: 35px;
+                height: 8px;
+            }
+        }
+    }
+}
